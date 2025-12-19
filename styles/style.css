@@ -280,7 +280,6 @@ button.card__icon-button:focus-visible {
   position: relative;
   background-color: var(--bg-color);
   border: 2px solid var(--border-color);
-  cursor: pointer;
   transition: box-shadow 0.3s ease;
   overflow: hidden;
   cursor: pointer;
