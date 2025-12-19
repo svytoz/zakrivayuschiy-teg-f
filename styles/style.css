@@ -355,7 +355,6 @@ dialog {
   position: fixed;
   inset: 0;
   padding: 28px 0 0 28px;
-  opacity: 0.3;
 }
 
 dialog:not([open]) {
@@ -448,7 +447,6 @@ dialog::backdrop {
     position: fixed;
     inset: 0;
     padding: 28px 0px 0px 35px;
-    opacity: 0.3;
   }
 
   .dialog__wrapper {
