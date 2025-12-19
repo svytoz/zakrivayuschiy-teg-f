@@ -79,11 +79,12 @@
   inline-size: 100%;
   background-color: var(--bg-color);
   border: 2px solid var(--border-color);
+  padding-block-start: 0;
   margin-block-end: 50px;
 }
 
 .card__title {
-  padding: 4px 10px;
+  padding: 4px 10px 2px;
   font-variation-settings: "wght" var(--font-weight-bold);
   font-size: 18px;
   line-height: 130%;
@@ -144,7 +145,7 @@
   text-transform: uppercase;
   text-shadow: 0 0 1px #fff;
   mix-blend-mode: hard-light;
-  opacity: 0.7;
+  opacity: 0.5;
 
   @supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
@@ -158,15 +159,10 @@
   flex-direction: column;
   gap: 25px;
   padding: 25px;
-  margin-block-start: -5px;
+  padding-block-start: 22px;
 }
 
 .card__text {
-  font-size: 18px;
-  line-height: 21px;
-}
-
-.memories {
   font-size: 18px;
   line-height: 21px;
 }
@@ -350,10 +346,13 @@ dialog {
   flex-direction: column;
   border: 2px solid var(--border-color);
   inline-size: var(--dialog-width);
-  block-size: 191px;
   position: fixed;
   inset: 0;
-  padding: 28px 0 0 28px;
+  margin: auto;
+  padding: 30px;
+  max-inline-size: 90vw;
+  max-block-size: 90vh;
+  overflow: auto;
 }
 
 dialog:not([open]) {
@@ -363,9 +362,9 @@ dialog:not([open]) {
 
 .dialog__wrapper {
   display: flex;
-  inline-size: 261px;
   gap: 18px;
-  margin-block-end: 25px;
+  margin-block-end: 30px;
+  max-inline-size: 100%;
 }
 
 .dialog__floppy {
@@ -384,12 +383,13 @@ dialog:not([open]) {
 
 .dialog__button {
   align-self: start;
-  inline-size: 293px;
+  inline-size: 100%;
+  max-inline-size: 293px;
   block-size: 40px;
 }
 
 dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.8);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 @media (width <=375px) {
@@ -407,7 +407,8 @@ dialog::backdrop {
   }
 
   .card__title {
-    line-height: 125%;
+    line-height: 128%;
+    padding: 4.5px 10px;
   }
 
   .text__wrapper {
@@ -421,11 +422,6 @@ dialog::backdrop {
   .card__text {
     font-size: 18px;
     line-height: 115%;
-  }
-
-  .memories {
-    font-size: 18px;
-    line-height: 119%;
   }
 
   .save__button {
@@ -442,14 +438,14 @@ dialog::backdrop {
 
   dialog {
     inline-size: 341px;
-    block-size: 191px;
+    min-block-size: 191px;
     position: fixed;
     inset: 0;
     padding: 28px 0px 0px 35px;
+    opacity: 0.3;
   }
 
   .dialog__wrapper {
-    display: flex;
     inline-size: 261px;
     gap: 18px;
     margin-inline-start: 0;
