@@ -169,16 +169,20 @@
 
 .button__wrapper {
   display: flex;
-  inline-size: 169px;
+  min-inline-size: 169px;
   block-size: 37px;
   margin-block-end: 25px;
   margin-inline-end: 25px;
   align-self: end;
+  gap: 7px;
   justify-content: space-evenly;
 }
 
 .card__icon-button {
-  inline-size: 35px;
+  display: flex;
+  justify-self: center;
+  inline-size: 39px;
+  block-size: 38px;
   padding-inline: 0;
   padding-block: 0;
   margin: 0;
@@ -186,14 +190,12 @@
 
 button.card__icon-button {
   background-color: var(--bg-color);
-  border: 2px solid var(--bg-color);
+  border: none;
 }
 
 .like-icon {
   inline-size: 39px;
   block-size: 36px;
-  margin-block-start: -2px;
-  margin-inline-start: -10px;
   cursor: pointer;
 }
 
@@ -443,7 +445,6 @@ dialog::backdrop {
     position: fixed;
     inset: 0;
     padding: 28px 0px 0px 35px;
-    opacity: 0.3;
   }
 
   .dialog__wrapper {

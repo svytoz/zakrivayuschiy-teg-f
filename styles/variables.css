@@ -1,6 +1,6 @@
 :root {
     --main-font: "Inter", sans-serif;
-    --accent-font: "PressStart2P", monospace;
+    --accent-font: "PressStart2P", monospace, fantasy;
     --font-weight-normal: 400;
     --font-weight-medium: 410;
     --font-weight-bold: 715;
